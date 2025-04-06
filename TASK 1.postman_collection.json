@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "9757774d-d813-4bb9-b7b8-2657c280a0ac",
+		"name": "TASK 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43775402",
+		"_collection_link": "https://koushik-8447560.postman.co/workspace/Koushik's-Workspace~3d28c21e-9828-4306-817b-5d56e4cc339c/collection/43775402-9757774d-d813-4bb9-b7b8-2657c280a0ac?action=share&source=collection_link&creator=43775402"
+	},
+	"item": [
+		{
+			"name": "Cokiee validation",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/auth",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Request",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking"
+					]
+				},
+				"description": "We performed this action to see if the api is working and to see all the booking in the database"
+			},
+			"response": []
+		},
+		{
+			"name": "Created a booking ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstname\": \"KOUSHIK\",\r\n  \"lastname\": \"BHAI\",\r\n  \"totalprice\": 111,\r\n  \"depositpaid\": true,\r\n  \"bookingdates\": {\r\n    \"checkin\": \"2018-01-01\",\r\n    \"checkout\": \"2019-01-01\"\r\n  },\r\n  \"additionalneeds\": \"Breakfast\"\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking"
+					]
+				},
+				"description": "Created a booking Name- KOUSHIK BHAI"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Request",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"RAJU\",\r\n    \"lastname\" : \"BHAI\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}'",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking/:1190",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking",
+						":1190"
+					],
+					"variable": [
+						{
+							"key": "1190",
+							"value": ""
+						}
+					]
+				},
+				"description": "PUT request is used to update the First name from \"KOUSHIK\" to \"RAJU\"\n\n**Remarks:** _Please note that this may not always function as expected, since the API is publicly accessible. Other users may use the same ID, which could result in the data being modified or deleted._"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Request for verification",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking/4232",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking",
+						"4232"
+					]
+				},
+				"description": "After updating the first name we used GER request to verify if the data is succesfully updated or not."
+			},
+			"response": []
+		}
+	]
+}

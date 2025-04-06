@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "b3f1d63c-1303-458c-9e90-8c12f8961f3a",
+		"name": "Task 5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43775402",
+		"_collection_link": "https://koushik-8447560.postman.co/workspace/Koushik's-Workspace~3d28c21e-9828-4306-817b-5d56e4cc339c/collection/43775402-b3f1d63c-1303-458c-9e90-8c12f8961f3a?action=share&source=collection_link&creator=43775402"
+	},
+	"item": [
+		{
+			"name": "Invalid Creation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    \"firstname\" : \"RAJU\",\r\n    \"lastname\" : \"BHAI\",\r\n    \"totalprice\" : 1111111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

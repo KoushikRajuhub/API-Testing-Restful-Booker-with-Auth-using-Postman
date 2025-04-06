@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "39e46965-fc0f-4edc-bf6c-c9dff179865e",
+		"name": "Task 6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43775402",
+		"_collection_link": "https://koushik-8447560.postman.co/workspace/Koushik's-Workspace~3d28c21e-9828-4306-817b-5d56e4cc339c/collection/43775402-39e46965-fc0f-4edc-bf6c-c9dff179865e?action=share&source=collection_link&creator=43775402"
+	},
+	"item": [
+		{
+			"name": "Deleting existing booking id 1136",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=d1ce61d727870ed",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking/1136",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking",
+						"1136"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating a booking ID Copy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"RAJU\",\r\n    \"lastname\" : \"BHAI\",\r\n    \"totalprice\" : 1111111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking/1136",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking",
+						"1136"
+					]
+				},
+				"description": "Updated a booking id 1506\r\nName - RAJU BHAI\r\nTotalprice - 111111"
+			},
+			"response": []
+		},
+		{
+			"name": "Updating a deleted booking",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"RAJU\",\r\n    \"lastname\" : \"BHAI\",\r\n    \"totalprice\" : 1111111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking/1136",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking",
+						"1136"
+					]
+				},
+				"description": "We are tryin to update an already deleted bookin.  \nExpected result - 405 Method Not Allowed"
+			},
+			"response": []
+		}
+	]
+}
